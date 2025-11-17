@@ -1,0 +1,7 @@
+
+SMPL-Anthropometry/__pycache__/*
+SMPL-Anthropometry/data/*/*.pkl
+SMPL-Anthropometry/models/*
+SMPL-Anthropometry/inputs/*
+data/*/point_segmentation_meshcapade.json
+SMPL-Anthropometry/visualizeMeasurements (EXPERIMENTING).ipynb
