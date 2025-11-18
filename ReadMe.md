@@ -79,29 +79,24 @@ Repository for this project:  442042529739.dkr.ecr.ap-south-1.amazonaws.com/smpl
 
 ## 1️⃣ Login to ECR
 
-aws ecr get-login-password --region ap-south-1
-| docker login
---username AWS
---password-stdin 442042529739.dkr.ecr.ap-south-1.amazonaws.com
+aws ecr get-login-password --region ap-south-1 \
+| docker login --username AWS --password-stdin 442042529739.dkr.ecr.ap-south-1.amazonaws.com
 
 ## 2️⃣ Tag the Docker Image
 
-docker tag smplx-extraction:latest
-442042529739.dkr.ecr.ap-south-1.amazonaws.com/smplx-extraction:latest
+docker tag smplx-extraction:latest 442042529739.dkr.ecr.ap-south-1.amazonaws.com/smplx-extraction:latest
 
 ---
 
 ## 3️⃣ Push the Image to ECR
 
-docker push
-442042529739.dkr.ecr.ap-south-1.amazonaws.com/smplx-extraction:latest
+docker push 442042529739.dkr.ecr.ap-south-1.amazonaws.com/smplx-extraction:latest
 
 ---
 
 # ▶️ Running the Image From ECR
 
-docker run --rm -it
-442042529739.dkr.ecr.ap-south-1.amazonaws.com/smplx-extraction:latest
+docker run --rm -it 442042529739.dkr.ecr.ap-south-1.amazonaws.com/smplx-extraction:latest
 
 ---
 
