@@ -53,6 +53,12 @@ Two measurement sets:
 
 # 🐳 Docker Usage
 
+## Before Build ##
+
+Download SMPLX Models
+
+Run ./download_smplx.sh inside SMPL-Anthropometry
+
 ## 1️⃣ Build the Image
 
 docker build -t smplx-extraction .
