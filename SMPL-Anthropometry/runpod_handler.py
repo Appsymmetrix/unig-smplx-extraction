@@ -18,8 +18,11 @@ def download_file(url, save_path):
 
 
 def handler(event):
-    pkl_url = event["input"].get("pkl_url")
-    height_cm = float(event["input"].get("height_cm", 170))
+    # Be tolerant of a missing/empty input so a malformed or control job
+    # returns an error instead of crashing the worker.
+    job_input = event.get("input") or {}
+    pkl_url = job_input.get("pkl_url")
+    height_cm = float(job_input.get("height_cm", 170))
 
     if not pkl_url:
         return {"error": "Missing required argument: pkl_url"}
